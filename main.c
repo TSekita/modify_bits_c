@@ -7,12 +7,6 @@ uint8_t modify_bits(uint8_t val, uint8_t mask, uint8_t data) {
     return new_val;
 }
 
-int get_bit(uint8_t val, int bit) {
-    int result = 0;
-    result = (val >> bit - 1) & 1;
-    return result;
-}
-
 void print_binary(uint8_t val) {
     for (int i = 7; i >= 0; i--) {
         printf("%d", (val >> i) & 1);
